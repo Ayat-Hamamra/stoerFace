@@ -1,0 +1,41 @@
+@import './base.css';
+body{
+    background-color:rgba(255, 228, 196, 0.432)
+}
+.product{
+    border-radius: 10px;
+    
+        background-color:#fff;
+        margin-bottom: 22px;
+    
+        text-align: center;
+        width: 200px;
+        height: 272px;
+        box-shadow:5px 5px 22px rgba(231, 210, 231, 1.607);
+    }
+    .Products  .product img{
+        width:150px ;
+    height:150px ;}
+    .Products .row .product h2{
+        padding: 23px;
+    font-size: 16px;
+    width: 150px;}
+
+
+    .Products .container .name{
+        filter: drop-shadow(2px 0px 2px black);
+        font-size: xx-large;
+            text-align: center;
+            padding: 34px;
+    }
+    .Products  .product span{
+        color:red;
+        filter:  drop-shadow(2px 0px 4px black);
+    }
+    .Products  .product img{
+        transition-duration: 1s;
+    transition:transform(2s);
+    }
+    .Products  .product img:hover{
+        transform: scale(1.5);
+    }
