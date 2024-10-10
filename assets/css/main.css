@@ -1,0 +1,7 @@
+@import './base.css';
+
+  .Category{
+    width: 20%;
+    padding: 25px;
+    background-color: rgb(164, 103, 10);
+}
