@@ -8,6 +8,7 @@ body{
 
 }
 .main  .row{
+    margin-top: 20px;
     align-items:flex-start;
 
 }
@@ -53,10 +54,148 @@ border-radius: 10px;
     height: 250px;
     box-shadow:5px 5px 22px rgba(231, 210, 231, 1.607);
 }
-.Products  .product img{
+.Products  .product  img{
     width:150px ;
 height:150px ;}
 .Products .row .product h2{
     padding: 23px;
 font-size: 20px;
 width: 150px;}
+@media screen and (max-width: 937px) {
+    .product {
+        width: 250px;
+        height: 250px;
+    }
+   
+}
+@media screen and (max-width: 810px) {
+    .product {
+        width: 50%;
+        margin-left: 20px;
+    }
+   
+   .main .container .row{
+    gap: 10px;
+   }
+}
+.loader-container{
+    display: none;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(154, 151, 149, 0.169);
+    position: fixed;
+}
+.activ{
+    display: flex;
+}
+.loading{
+ width: 50px ;
+ height: 50px ;
+border-radius:50%;
+border:5px solid #683333c5;
+border-bottom-color:transparent ;
+animation: rotate 1s infinite linear;
+}
+@keyframes rotate {
+0%{
+transform:rotate(0deg);
+}   
+100%{
+    transform:rotate(360deg);
+
+} 
+}
+
+
+
+.header {
+    padding: 15px 0px;
+    background-color: rgba(241, 225, 231, 0.58);
+    position: sticky;
+    top: 0px;
+}
+
+.header .logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+}
+
+.header .logo img {
+    width: 25px;
+}
+
+.header .logo a {
+    font-weight: 500;
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--mainColor);
+
+}
+
+.home {
+    order: 1;
+    color: var(--mainColor);
+    display: none;
+
+}
+
+.header .nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header .nav ul li a {
+    color: #101828;
+    font-family: var(--mainFont);
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: calc(100% - 33px);
+    }
+
+    .header .logo img {
+        width: 20px;
+    }
+
+    .header .logo a {
+        font-size: 14px;
+    }
+}
+
+.active {
+    font-weight: 700;
+}
+
+.auth {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.auth a {
+    padding: 5px 25px;
+    font-family: var(--subFont);
+    border: solid 2px var(--mainColor);
+    border-radius: 8px;
+}
+
+.auth .login {
+    color: var(--mainColor);
+
+}
+
+.auth .Register {
+    color: #101828;
+    background-color: var(--mainColor);
+}
+
+.navscroll{
+    background-color:rgba(185, 124, 154, 0.82);
+
+box-shadow: 0px 5px 5px rgb(202, 172, 172);}

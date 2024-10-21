@@ -6,6 +6,9 @@ const geCategories = async () => {
 };
 
 const displayCategories = async (data) => {
+    const loader= document.querySelector(".loader-container");
+    loader.classList.add("activ");
+  try{
     const categories = await geCategories();
     const result = categories
         .map((category) => {
@@ -18,7 +21,16 @@ const displayCategories = async (data) => {
         .join(" ");
 
     document.querySelector(".categories  ").innerHTML += result;
-};
+   }
+   catch(error){
+    document.querySelector(".categories  ").innerHTML = "<div>error</div>";
+   }
+
+   finally{
+    loader.classList.remove("activ");
+   }
+    }
+
 
 displayCategories();
 const getProducts = async () => {
@@ -31,7 +43,9 @@ const displayProducts = async () => {
     .map( (product)=> {
         return `
 <div class="product">
+
 <img src="${product.thumbnail}" alt="${product.description}"/>
+
 <h2>${product.title}</h2>
 </div>
 `
@@ -40,3 +54,13 @@ const displayProducts = async () => {
     document.querySelector(".Products  .row").innerHTML += result;
 };
 displayProducts();
+ window.onscroll=function(){
+const navbar=document.querySelector(".header" );
+const section1=document.querySelector(".main .container .categories" );
+if( window.scrollY > section1.offsetTop ) {
+    console.log("test");
+    navbar.classList.add("navscroll");
+}
+else{
+    navbar.classList.remove("navscroll");
+}}

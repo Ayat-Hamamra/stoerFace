@@ -13,6 +13,9 @@ const params=new URLSearchParams(window.location.search);
 
 
 const displayProducts = async () => {
+    const loader= document.querySelector(".loader-container");
+    loader.classList.add("activ");
+  try{
     const data = await getProduct();
     const result = data.products
     .map( (product)=> {
@@ -26,7 +29,14 @@ const displayProducts = async () => {
 `
     }).join(' ');
 
-    document.querySelector(".Products  .row").innerHTML += result;
+    document.querySelector(".Products  .row").innerHTML += result;}
+    catch(error){
+        document.querySelector(".Products  ").innerHTML = "<div>error</div>";
+       }
+    
+       finally{
+        loader.classList.remove("activ");
+       }
 };
 displayProducts();
 
