@@ -63,7 +63,11 @@ body{
 .active {
     font-weight: 700;
 }
-
+.nav i{
+    background-color:rgba(185, 124, 154, 0.82);
+    padding:7px;
+    border-radius:50%;
+}
 .auth {
     flex-wrap: wrap;
     display: flex;
@@ -76,6 +80,9 @@ body{
     font-family: var(--subFont);
     border: solid 2px var(--mainColor);
     border-radius: 8px;
+}
+.auth a:hover {
+    text-decoration: underline rgba(185, 124, 154, 0.82);
 }
 
 .auth .login {
@@ -125,6 +132,9 @@ border-radius: 10px;
     font-size: 20px ;
     font-weight: bold;
 
+}
+.Category a:hover{
+    text-decoration:underline rgba(185, 124, 154, 0.82) ;
 }
 .Products{
 
